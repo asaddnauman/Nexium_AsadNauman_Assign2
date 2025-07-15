@@ -1,15 +1,19 @@
-const dictionary: Record<string, string> = {
+// utils/dictionary.ts
+
+export const urduDictionary: Record<string, string> = {
   blog: "بلاگ",
   summary: "خلاصہ",
-  the: "دی",
+  this: "یہ",
   is: "ہے",
-  about: "کے بارے میں",
-  and: "اور",
+  a: "ایک",
+  test: "امتحان",
+  example: "مثال",
+  text: "متن",
 };
 
 export function translateToUrdu(text: string): string {
   return text
     .split(" ")
-    .map((word) => dictionary[word.toLowerCase()] || word)
+    .map((word) => urduDictionary[word.toLowerCase()] || word)
     .join(" ");
 }
